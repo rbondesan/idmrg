@@ -1,0 +1,38 @@
+Description:
+-----------
+
+Python implementation of idmrg code, see idmrg.py for more information.
+
+It is written in Python 2 and is built on numpy/scipy and the modules
+contained in the directory my_package. It contains also two other
+scripts EE_vs_D.py and corr.py to analyse the data and computing
+observables. More documentation to come.
+
+New models can be added as files in my_package. Currently supported
+quantum Hamiltonians are: transverse field Ising, XXZ, XXX spin 1,
+quantum group invariant XXZ (RXXZ).
+
+Run the code:
+-------------
+
+E.g.: run code for Ising quantum chain with parameters in
+config/test_Ising.
+
+python idmrg.py -f config/test_Ising
+
+Compute MPS transfer matrix spectrum, entanglement entropy and energy:
+
+python EE_vs_D.py
+
+Compute correlation functions
+
+python corr.py -D 20
+
+where 20 is the auxiliary dimension specified in config/test_Ising.
+
+Version and testing:
+--------------------
+
+Tested on Mac Os Sierra, Ubuntu 14.10, Windows 10
+
+Version: beta
